@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+这是soFun项目。主要想做一个工具站。欢迎贡献commit或向我提出宝贵意见。
 
-## Getting Started
+我们的口号是：**构建快乐，发现趣味。**
 
-First, run the development server:
+> 这是一个工具网站，用于创建有用好玩的实用工具。
+
+## 快速上手
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 了解更多
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+要了解 Next.js, 可以看下面如下资源:
 
-## Learn More
+- [Next.js Documentation](https://nextjs.org/docs) - 学习了解Next.js的功能和API.
+- [Learn Next.js](https://nextjs.org/learn) - 一个渐进式的练习实战.
 
-To learn more about Next.js, take a look at the following resources:
+## Git规范（重要哦）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 开发时请多建分支，对于主要Task级别的功能任务，请建立 feat/用户名/功能任务简写的分支，如feat/kaiwen/addHome
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 提交时恰到好处的描述。
 
-## Deploy on Vercel
+- 使用emoji 来标识每次提交的主要意图。[gitmoji](https://gitmoji.js.org/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ![emoji](C:\Users\skydd\OneDrive\Pictures\项目\soFun\gitmoji.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 使用到的技术栈
+
+项目主要使用next.js做全栈,入门上手前大致了解服务端组件和客户端组件、服务端Action即可。以及React的一些入门基础即可。
+
+本项目运行在 Node 18.20.1(推荐)
+1. 数据库相关
+
+   [Prisma](https://www.prisma.io/docs)和Postgresql
+
+2. 后端参数校验
+
+   [Zod](https://zod.dev/?id=basic-usage)
+
+3. CSS相关
+
+   [TailwindCss](https://tailwindcss.com)和Less版本的CSS Module(喜欢CSS和模板分离的可以使用这种。
+
+4. 全局状态管理
+
+   [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+
+5. Hook相关
+
+   [AHook](https://ahooks.js.org/zh-CN/hooks/use-request/index)
+
+6. 其他
+
+   图标：[lucide-react](https://lucide.dev/)
+
+   
+
+   
+
+   
+
+
+
