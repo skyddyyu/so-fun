@@ -1,6 +1,6 @@
 这是soFun项目。主要想做一个工具站。欢迎贡献commit或向我提出宝贵意见。
 
-我们的口号是：**构建快乐，发现趣味。**
+我们的口号是：**https://github.com/skyddyyu/so-fun.git。**
 
 > 这是一个工具网站，用于创建有用好玩的实用工具。
 
@@ -46,7 +46,7 @@ yarn dev
 
 3. CSS相关
 
-   [TailwindCss](https://tailwindcss.com)和Less版本的CSS Module(喜欢CSS和模板分离的可以使用这种。
+   [TailwindCss](https://tailwindcss.com)和Less版本的CSS Module(喜欢CSS和模板分离的可以使用这种。)
 
 4. 全局状态管理
 
