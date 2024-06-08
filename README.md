@@ -1,6 +1,6 @@
-这是soFun项目。主要想做一个工具站。欢迎贡献commit或向我提出宝贵意见。
+这是soFun项目。主要想做一个工具站。欢迎贡献commit或提出宝贵意见。
 
-我们的口号是：**https://github.com/skyddyyu/so-fun.git。**
+我们的口号是：**构建快乐，发现趣味。**
 
 > 这是一个工具网站，用于创建有用好玩的实用工具。
 
@@ -29,7 +29,7 @@ yarn dev
 
 - 使用emoji 来标识每次提交的主要意图。[gitmoji](https://gitmoji.js.org/)
 
-  ![emoji](C:\Users\skydd\OneDrive\Pictures\项目\soFun\gitmoji.png)
+  ![emoji](https://blog.sofun.fun/images/other/gitmoji.png)
 
 ## 使用到的技术栈
 
