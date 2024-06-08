@@ -7,6 +7,10 @@
 ## 快速上手
 
 ```bash
+# 打开项目请先运行下面命令初始化husky以保证代码风格
+npm run prepare
+
+# 项目启动
 npm run dev
 # or
 yarn dev
@@ -36,6 +40,7 @@ yarn dev
 项目主要使用next.js做全栈,入门上手前大致了解服务端组件和客户端组件、服务端Action即可。以及React的一些入门基础即可。
 
 本项目运行在 Node 18.20.1(推荐)
+
 1. 数据库相关
 
    [Prisma](https://www.prisma.io/docs)和Postgresql
@@ -59,12 +64,3 @@ yarn dev
 6. 其他
 
    图标：[lucide-react](https://lucide.dev/)
-
-   
-
-   
-
-   
-
-
-
