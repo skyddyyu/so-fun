@@ -23,7 +23,7 @@ yarn dev
 要了解 Next.js, 可以看下面如下资源:
 
 - [Next.js Documentation](https://nextjs.org/docs) - 学习了解Next.js的功能和API.
-- [Learn Next.js](https://nextjs.org/learn) - 一个渐进式的练习实战.
+- [Learn Next.js实战项目](https://github.com/vercel/next-learn/tree/main/dashboard/final-example) - 一个渐进式的练习实战. [Learn Next.js文档](https://nextjs.org/learn)
 
 ## Git规范（重要哦）
 
