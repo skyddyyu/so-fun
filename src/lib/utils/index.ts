@@ -1,3 +1,4 @@
-import * as tailwind from "@/lib/utils/tailwind";
+import * as encrypt from "./encrypt";
+import { cn } from "./tailwind";
 
-export { tailwind };
+export { encrypt, cn };

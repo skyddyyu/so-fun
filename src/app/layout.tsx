@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "soFun——构建快乐，发现趣味",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zhCN">
-      <body>{children}</body>
+      <body>
+        <>
+          {children}
+          <Toaster />
+        </>
+      </body>
     </html>
   );
 }
