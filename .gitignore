@@ -37,3 +37,6 @@ next-env.d.ts
 
 # 编辑器
 .idea
+
+# 环境变量
+.env
