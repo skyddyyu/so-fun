@@ -13,7 +13,7 @@ model user {
   username   String    @db.VarChar(255)
   nickname   String    @db.VarChar(255)
   password   String    @db.VarChar(255)
-  email      String?   @db.VarChar(255)
+  email      String    @db.VarChar(255)
   createTime DateTime? @map("create_time") @db.Timestamptz(6)
   updateTime DateTime? @map("update_time") @db.Timestamptz(6)
 }
