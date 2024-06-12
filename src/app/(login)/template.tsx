@@ -7,7 +7,7 @@ const LoginTemplate = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="grid min-h-screen grid-cols-1 lg:grid-cols-1">
+    <div className="grid min-h-screen grid-cols-1">
       <div className="flex items-center justify-center bg-[#f8f8f8] p-6 lg:p-12">
         <div className="w-full max-w-md space-y-6">
           <Image
