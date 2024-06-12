@@ -16,11 +16,13 @@ export async function authenticate(
     await signIn("credentials", formData);
   } catch (error) {
     if (error instanceof AuthError) {
+      console.log("密码校验的时候有错误", error, error.type);
       switch (error.type) {
         case "CredentialsSignin":
-          return "非法的凭证";
+          return "非法的验证方式";
         default:
-          return "遇到了一些未知错误.";
+          // todo 目前只能笼统提示 待修改 next-auth的用法还不大会
+          return "用户名密码错误或用户不存在";
       }
     }
     throw error;

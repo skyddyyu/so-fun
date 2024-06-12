@@ -55,6 +55,7 @@ export async function registerUser(
     username: formData.get("username") as string,
     nickname: formData.get("nickname") as string,
     password: formData.get("password") as string,
+    confirmPassword: formData.get("confirmPassword") as string,
     email: formData.get("email") as string,
   };
   const userValidatedFields = z
@@ -62,15 +63,21 @@ export async function registerUser(
       username: z.string().min(2).max(15),
       nickname: z.string().min(2).max(12),
       password: z.string().min(8).max(18),
+      confirmPassword: z.string().min(8).max(18),
       email: z.string().email(),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: "两次密码输入不匹配",
+      path: ["confirmPassword"],
     })
     .safeParse(user);
 
   // 如果表单验证失败, 返回错误. 否则，继续.
   if (!userValidatedFields.success) {
+    console.log("用户字段校验失败：", user);
     return {
       errors: userValidatedFields.error.flatten().fieldErrors,
-      message: "用户字段校验失败， 失败的去注册用户。",
+      message: "用户字段校验失败，请修改后重试。",
     };
   }
 

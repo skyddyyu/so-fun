@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import LogInOrOutButton from "@/components/ui/LogInOrOutButton";
 import { useFormState } from "react-dom";
 import { UserActions } from "@/lib/actions";
-import toast from "react-hot-toast";
 import Link from "next/link";
 
 const Register = () => {
@@ -13,15 +12,6 @@ const Register = () => {
     UserActions.registerUser,
     undefined,
   );
-
-  const handleSubmit = (formData: FormData) => {
-    dispatch(formData);
-    if (!!errorMessage?.message) {
-      toast.error(errorMessage?.message);
-    } else {
-      toast.success("注册成功！");
-    }
-  };
 
   return (
     <>
@@ -31,7 +21,7 @@ const Register = () => {
         </h1>
         <p className="text-gray-500 dark:text-gray-400">创建帐户开始使用。</p>
       </div>
-      <form action={handleSubmit} className="space-y-4">
+      <form action={dispatch} className="space-y-4">
         <div>
           <Label htmlFor="username">用户名</Label>
           <Input id="username" name="username" required />
@@ -48,7 +38,7 @@ const Register = () => {
           <Label htmlFor="nickname">昵称</Label>
           <Input id="nickname" name="nickname" required />
         </div>
-        <div id="username-error" aria-live="polite" aria-atomic="true">
+        <div id="nickname-error" aria-live="polite" aria-atomic="true">
           {errorMessage?.errors?.nickname &&
             errorMessage?.errors.nickname.map((error: string) => (
               <p className="mt-2 text-sm text-red-500" key={error}>
@@ -66,7 +56,7 @@ const Register = () => {
             type="email"
           />
         </div>
-        <div id="username-error" aria-live="polite" aria-atomic="true">
+        <div id="email-error" aria-live="polite" aria-atomic="true">
           {errorMessage?.errors?.email &&
             errorMessage?.errors.email.map((error: string) => (
               <p className="mt-2 text-sm text-red-500" key={error}>
@@ -78,9 +68,26 @@ const Register = () => {
           <Label htmlFor="password">密码</Label>
           <Input id="password" name="password" required type="password" />
         </div>
-        <div id="username-error" aria-live="polite" aria-atomic="true">
+        <div id="password-error" aria-live="polite" aria-atomic="true">
           {errorMessage?.errors?.password &&
             errorMessage?.errors.password.map((error: string) => (
+              <p className="mt-2 text-sm text-red-500" key={error}>
+                {error}
+              </p>
+            ))}
+        </div>
+        <div>
+          <Label htmlFor="confirmPassword">确认密码</Label>
+          <Input
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            type="password"
+          />
+        </div>
+        <div id="confirmPassword-error" aria-live="polite" aria-atomic="true">
+          {errorMessage?.errors?.confirmPassword &&
+            errorMessage?.errors.confirmPassword.map((error: string) => (
               <p className="mt-2 text-sm text-red-500" key={error}>
                 {error}
               </p>

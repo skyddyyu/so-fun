@@ -6,9 +6,9 @@ import prisma from "@/lib/prisma";
 import { encrypt } from "@/lib/utils";
 import { z } from "zod";
 
-async function getUser(email: string): Promise<User | undefined> {
+async function getUser(email: string): Promise<User | null | undefined> {
   try {
-    return prisma.user.findFirstOrThrow({
+    return prisma.user.findFirst({
       where: {
         email,
       },
