@@ -16,24 +16,28 @@ npm run dev
 yarn dev
 ```
 
+打开 [http://localhost:3000](http://localhost:3000).
+
 ## 首次启动
 
-```bash
-# 请统一使用yarn做包管理 且确保yarn不是1.x版本
+1. 统一使用yarn管理依赖
 
-# 查看yarn版本
-yarn --version
+   ```bash
+   # 请统一使用yarn做包管理 且确保yarn不是1.x版本
 
-# 使用如下命令可以更新yarn到最新版本
-corepack enable
-yarn set version berry
-# 设置新版yarn依旧使用node_modules
-# 新建.yarnrc.yml文件 内容为 nodeLinker: node-modules
-# 最后
-yarn install
-```
+   # 查看yarn版本
+   yarn --version
 
-打开 [http://localhost:3000](http://localhost:3000).
+   # 使用如下命令可以更新yarn到最新版本
+   corepack enable
+   yarn set version berry
+   # 设置新版yarn依旧使用node_modules
+   # 新建.yarnrc.yml文件 内容为 nodeLinker: node-modules
+   # 最后
+   yarn install
+   ```
+
+2. 初始化数据库和数据
 
 ## 了解更多
 

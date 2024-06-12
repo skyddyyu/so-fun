@@ -3,7 +3,8 @@ export type User = {
   username: string;
   nickname: string;
   password: string;
-  email: string;
+  email: string | null;
+  image?: string | null;
   createTime?: Date | null;
   updateTime?: Date | null;
 };

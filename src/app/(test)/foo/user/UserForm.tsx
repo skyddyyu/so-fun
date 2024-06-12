@@ -18,12 +18,11 @@ import { User } from "@/lib/definitions";
 import toast from "react-hot-toast";
 import { encrypt } from "@/lib/utils";
 
-// 1. 定义用户表单Schema.
-const formSchema = z.object({
+export const userFormSchema = z.object({
   username: z.string().min(2).max(15),
   nickname: z.string().min(2).max(12),
   password: z.string().min(8).max(18),
-  email: z.string().email().optional(),
+  email: z.string().email(),
 });
 
 interface UserFormProps {
@@ -32,13 +31,13 @@ interface UserFormProps {
 
 const UserForm: FC<UserFormProps> = ({ createUser }) => {
   // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof userFormSchema>>({
+    resolver: zodResolver(userFormSchema),
     defaultValues: {},
   });
 
   // 2. Define a submit handler.
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof userFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
