@@ -39,6 +39,17 @@ yarn dev
 
 2. 初始化数据库和数据
 
+   ```bash
+   # 项目使用prisma进行数据库操作
+
+   # 1.需要先初始化prisma配置，执行后将生成schema.prisma文件 该文件主要用于配置数据库model
+   npx prisma init
+   # 2.将prisma的schema同步到数据库，执行该命令会自动创建数据库和表结构
+   prisma db push
+   # 3.根据model生成orm库的客户端api
+   npx prisma generate
+   ```
+
 ## 了解更多
 
 要了解 Next.js, 可以看下面如下资源:

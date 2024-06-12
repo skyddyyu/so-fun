@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import { Toaster } from "react-hot-toast";
+import "@/lib/utils/shutdown";
 
 export const metadata: Metadata = {
   title: "soFun——构建快乐，发现趣味",

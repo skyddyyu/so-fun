@@ -26,7 +26,7 @@ export const userFormSchema = z.object({
 });
 
 interface UserFormProps {
-  createUser: (user: User) => Promise<{ message: string }>;
+  createUser: (user: User) => Promise<{ message: string; success: boolean }>;
 }
 
 const UserForm: FC<UserFormProps> = ({ createUser }) => {
@@ -41,8 +41,12 @@ const UserForm: FC<UserFormProps> = ({ createUser }) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
-    const { message } = await createUser(values);
-    toast(message);
+    const { message, success } = await createUser(values);
+    if (!success) {
+      toast.error(message);
+    } else {
+      toast.success(message);
+    }
     console.log("服务器操作执行完毕");
   }
 

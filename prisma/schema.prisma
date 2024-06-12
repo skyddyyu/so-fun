@@ -14,6 +14,6 @@ model user {
   nickname   String    @db.VarChar(255)
   password   String    @db.VarChar(255)
   email      String    @db.VarChar(255)
-  createTime DateTime? @map("create_time") @db.Timestamptz(6)
-  updateTime DateTime? @map("update_time") @db.Timestamptz(6)
+  createTime DateTime? @default(now()) @map("create_time") @db.Timestamptz(6)
+  updateTime DateTime? @updatedAt @map("update_time") @db.Timestamptz(6)
 }

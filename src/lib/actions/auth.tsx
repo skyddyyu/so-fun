@@ -2,6 +2,11 @@
 import { signIn } from "@/lib/auth";
 import { AuthError } from "next-auth";
 
+/**
+ * 登录时的认证action
+ * @param prevState
+ * @param formData
+ */
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData,
