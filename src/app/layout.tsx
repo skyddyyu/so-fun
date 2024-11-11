@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import { Toaster } from "react-hot-toast";
-import "@/lib/utils/shutdown";
+import { LayoutGlobalContext } from "./LayoutGlobalContext";
 
 export const metadata: Metadata = {
   title: "soFun——构建快乐，发现趣味",
@@ -18,8 +18,10 @@ export default function RootLayout({
     <html lang="zhCN">
       <body>
         <>
-          {children}
-          <Toaster />
+          <LayoutGlobalContext>
+            {children}
+            <Toaster />
+          </LayoutGlobalContext>
         </>
       </body>
     </html>
