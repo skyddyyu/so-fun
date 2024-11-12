@@ -37,9 +37,6 @@ importers:
       dayjs:
         specifier: ^1.11.11
         version: 1.11.13
-      dotenv:
-        specifier: ^16.4.5
-        version: 16.4.5
       graphql:
         specifier: ^16.9.0
         version: 16.9.0
@@ -89,6 +86,9 @@ importers:
       "@graphql-codegen/client-preset":
         specifier: 4.5.0
         version: 4.5.0(graphql@16.9.0)
+      "@graphql-codegen/import-types-preset":
+        specifier: ^3.0.0
+        version: 3.0.0(graphql@16.9.0)
       "@graphql-codegen/introspection":
         specifier: 4.0.3
         version: 4.0.3(graphql@16.9.0)
@@ -104,6 +104,9 @@ importers:
       "@graphql-codegen/typescript-react-query":
         specifier: ^6.1.0
         version: 6.1.0(graphql@16.9.0)
+      "@next/env":
+        specifier: ^15.0.3
+        version: 15.0.3
       "@types/lodash-es":
         specifier: ^4.17.12
         version: 4.17.12
@@ -759,6 +762,14 @@ packages:
       graphql: ^15.5.0 || ^16.0.0 || ^17.0.0
       typescript: ^5.0.0
 
+  "@graphql-codegen/add@3.2.3":
+    resolution:
+      {
+        integrity: sha512-sQOnWpMko4JLeykwyjFTxnhqjd/3NOG2OyMuvK76Wnnwh8DRrNf2VEs2kmSvLl7MndMlOj7Kh5U154dVcvhmKQ==,
+      }
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+
   "@graphql-codegen/add@5.0.3":
     resolution:
       {
@@ -804,6 +815,15 @@ packages:
         integrity: sha512-EUQuBsYB5RtNlzBb/O0nJvbWC8HvPRWwVTHRf0ElOoQlJfRgfDom2GWmEM5hXa2afzMqB7AWxOH24ibOqiYnMQ==,
       }
     engines: { node: ">=16" }
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+
+  "@graphql-codegen/import-types-preset@3.0.0":
+    resolution:
+      {
+        integrity: sha512-8Gl3cg+YCi0xLB5J71QQkqXvrdJVOTitJy+0YupconZwrd9cRWhN3k+SimtMKpzTVBNN96v1R8yvFLdfVF+iZA==,
+      }
+    engines: { node: ">= 16.0.0" }
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
@@ -1366,6 +1386,12 @@ packages:
     resolution:
       {
         integrity: sha512-MCgO7VHxXo8sYR/0z+sk9fGyJJU636JyRmkjc7ZJY8Hurl8df35qG5hoAh5KMs75FLjhlEo9bb2LGe89Y/scDA==,
+      }
+
+  "@next/env@15.0.3":
+    resolution:
+      {
+        integrity: sha512-t9Xy32pjNOvVn2AS+Utt6VmyrshbpfUMhIjFO60gI58deSo/KgLOp31XZ4O+kY/Is8WAGYwA5gR7kOb1eORDBA==,
       }
 
   "@next/eslint-plugin-next@14.2.17":
@@ -6423,6 +6449,12 @@ snapshots:
       graphql: 16.9.0
       typescript: 5.6.2
 
+  "@graphql-codegen/add@3.2.3(graphql@16.9.0)":
+    dependencies:
+      "@graphql-codegen/plugin-helpers": 3.1.2(graphql@16.9.0)
+      graphql: 16.9.0
+      tslib: 2.4.1
+
   "@graphql-codegen/add@5.0.3(graphql@16.9.0)":
     dependencies:
       "@graphql-codegen/plugin-helpers": 5.1.0(graphql@16.9.0)
@@ -6511,6 +6543,17 @@ snapshots:
       "@graphql-codegen/visitor-plugin-common": 5.5.0(graphql@16.9.0)
       "@graphql-tools/utils": 10.5.4(graphql@16.9.0)
       auto-bind: 4.0.0
+      graphql: 16.9.0
+      tslib: 2.6.3
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  "@graphql-codegen/import-types-preset@3.0.0(graphql@16.9.0)":
+    dependencies:
+      "@graphql-codegen/add": 3.2.3(graphql@16.9.0)
+      "@graphql-codegen/plugin-helpers": 3.1.2(graphql@16.9.0)
+      "@graphql-codegen/visitor-plugin-common": 2.13.1(graphql@16.9.0)
       graphql: 16.9.0
       tslib: 2.6.3
     transitivePeerDependencies:
@@ -7092,6 +7135,8 @@ snapshots:
       "@types/react": 18.3.10
 
   "@next/env@14.2.17": {}
+
+  "@next/env@15.0.3": {}
 
   "@next/eslint-plugin-next@14.2.17":
     dependencies:

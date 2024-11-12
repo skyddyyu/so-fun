@@ -1,5 +1,5 @@
 "use client";
-import { useGetAllUserQuery } from "@/generates";
+import { useGetAllUserQuery } from "@/api/hooks";
 import React, { useEffect } from "react";
 
 export default function Page() {
